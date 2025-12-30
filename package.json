@@ -15,6 +15,8 @@
     "@mui/material": "^7.3.6",
     "@reduxjs/toolkit": "^2.11.2",
     "@tailwindcss/vite": "^4.1.18",
+    "aos": "^2.3.4",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.0",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@types/aos": "^3.0.7",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",

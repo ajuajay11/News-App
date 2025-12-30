@@ -61,5 +61,13 @@
     "trash": "Trash",
     "spam": "Spam",
     "openDrawer": "Open drawer"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "success": "Sign up successful!"
   }
 }

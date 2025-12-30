@@ -52,7 +52,7 @@ export default function Landing() {
       <section className="container mx-auto px-4 mt-10" id="home">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="col-span-2">
-            <div className="news relative h-[500px] overflow-hidden rounded-lg">
+            <div className="news relative h-[500px] overflow-hidden rounded-lg" data-aos="fade-in" data-aos-duration="2000" data-aos-offset="0" data-aos-once="false">
               <Link to={`/posts/${postsWithAuthors[0].id}`} className="newsarticleImage block h-full">
                 <ImageWithFallback src={News} alt="news" className="w-full h-full object-cover" />
 
@@ -90,7 +90,7 @@ export default function Landing() {
             </div>
             <div className="grid grid-cols-2 gap-10 lg:px-5 mt-10">
               {postsWithAuthors && postsWithAuthors.map((post) => (
-                <div key={post.id} className="col-span-2 lg:col-span-1" >
+                <div key={post.id} className="col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0" data-aos-once="false">
                   <NewsBox postId={post.id} title={post.title} desc={post.body} />
                 </div>
               ))}
@@ -100,7 +100,7 @@ export default function Landing() {
             <div className="sticky top-0">
               <h2 className="fontTwo font-bold mb-3 color_palete">{t("landing.trendingNews")}</h2>
               {postsWithAuthors.slice(5, 9).map((post) => (
-                <div key={post.id} className="grid grid-cols-3 gap-4 pb-3 pt-4 border-b-2 border-indigo-200">
+                <div key={post.id} className="grid grid-cols-3 gap-4 pb-3 pt-4 border-b-2 border-indigo-200" data-aos="fade-in" data-aos-duration="2000" data-aos-offset="0" data-aos-once="false">
                   <div className="..."><ImageWithFallback
                     src={`https://picsum.photos/seed/${post.id}/600/400`}
                     alt={post.title} width="100" style={{ maxHeight: "100px" }}

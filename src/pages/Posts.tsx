@@ -21,7 +21,7 @@ export default function Posts() {
         await navigator.share({
           title: postWithAuthor.title,
           text: "Check this out!",
-          url: `http:localhost:5173/${postWithAuthor.id}`,
+          url: `https://news-app-lyart-six.vercel.app/${postWithAuthor.id}`,
         });
       } catch (error) {
         console.log("Share cancelled or failed:", error);
@@ -91,7 +91,6 @@ export default function Posts() {
             className="w-full h-full object-cover"
           />
         </div>
-
         <div >
           {[1, 2, 3, 4].map((e) => (
             <div key={e}>
