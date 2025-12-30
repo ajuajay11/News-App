@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-export type Language = "eng" | "ar";
+export type Language = "ar" | "en";
 export type LocalisationState ={
     language:Language
 }
+const savedLang = localStorage.getItem("language") as Language | null;
+
 const initialState: LocalisationState  = {
-  language: 'eng',
+  language: savedLang === 'ar' ? 'ar' : 'en',
 }
 export const languageSlice = createSlice({
   name: 'localisation',

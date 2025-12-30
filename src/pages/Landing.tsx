@@ -11,6 +11,7 @@ import Title from "../components/newsSection/Title";
 import { truncateText } from "../utils/truncated";
 import ShowMore from "../components/ShowMore";
 import NewsBox from "../components/newsSection/NewsBox";
+import ImageWithFallback from "../components/ImageWithFallback";
 type PostWithAuthor = Posts & {
   author: User | undefined;
 };
@@ -53,13 +54,13 @@ export default function Landing() {
           <div className="col-span-2">
             <div className="news relative h-[500px] overflow-hidden rounded-lg">
               <Link to={`/posts/${postsWithAuthors[0].id}`} className="newsarticleImage block h-full">
-                <img src={News} alt="news" className="w-full h-full object-cover" />
+                <ImageWithFallback src={News} alt="news" className="w-full h-full object-cover" />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <span className="inline-block bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded mb-3">
-                    BREAKING NEWS
+                    {t("landing.breakingNews")}
                   </span>
 
                   <Title text={postsWithAuthors[0].title} />
@@ -77,7 +78,7 @@ export default function Landing() {
                               {postsWithAuthors[0].author.name.charAt(0)}
                             </span>
                           </div>
-                          <span className="font-medium">By {postsWithAuthors[0].author.name}</span>
+                          <span className="font-medium">{t("landing.by")} {postsWithAuthors[0].author.name}</span>
                         </div>
                         <span className="text-gray-300">•</span>
                         <span className="text-gray-300">{new Date().toLocaleDateString()}</span>
@@ -97,10 +98,10 @@ export default function Landing() {
           </div>
           <div className="relative col-span-2 lg:col-span-1">
             <div className="sticky top-0">
-              <h2 className="fontTwo font-bold mb-3 color_palete">Trending News</h2>
+              <h2 className="fontTwo font-bold mb-3 color_palete">{t("landing.trendingNews")}</h2>
               {postsWithAuthors.slice(5, 9).map((post) => (
                 <div key={post.id} className="grid grid-cols-3 gap-4 pb-3 pt-4 border-b-2 border-indigo-200">
-                  <div className="..."><img
+                  <div className="..."><ImageWithFallback
                     src={`https://picsum.photos/seed/${post.id}/600/400`}
                     alt={post.title} width="100" style={{ maxHeight: "100px" }}
                     className="object-cover w-full h-full rounded-xl"

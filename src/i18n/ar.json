@@ -1,12 +1,18 @@
 {
   "welcomeMessage": "مرحبًا بك في تطبيقي!",
-  "failed_to_load": "مرحبًا بك في تط",
+  "failed_to_load": "فشل في التحميل",
+  "no_posts_available": "لا توجد منشورات متاحة",
+  "read": "اقرأ المزيد",
   "language": {
     "english": "الإنجليزية",
     "arabic": "العربية"
   },
   "header": {
-    "theme": "المظهر"
+    "theme": "المظهر",
+    "dark": "داكن",
+    "light": "فاتح",
+    "signup": "تسجيل",
+    "subscribe": "اشتراك"
   },
   "nav": {
     "news": "الأخبار",
@@ -17,6 +23,43 @@
     "sport": "الرياضة",
     "video": "فيديو",
     "more": "المزيد"
+  },
+  "landing": {
+    "breakingNews": "أخبار عاجلة",
+    "trendingNews": "أخبار رائجة",
+    "by": "بواسطة"
+  },
+  "post": {
+    "share": "مشاركة",
+    "checkThisOut": "تحقق من هذا!",
+    "shareNotSupported": "المشاركة غير مدعومة على هذا الجهاز. انسخ الرابط بدلاً من ذلك.",
+    "europeDigitalEditor": "محرر رقمي لأوروبا",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "company": "الشركة",
+    "website": "الموقع الإلكتروني",
+    "lat": "خط العرض",
+    "lng": "خط الطول",
+    "timeAgo": "قبل 52 دقيقة"
+  },
+  "about": {
+    "content": "مرحبًا، هذه صفحة من نحن"
+  },
+  "footer": {
+    "text": "تذييل الصفحة"
+  },
+  "common": {
+    "showMore": "عرض المزيد"
+  },
+  "drawer": {
+    "inbox": "صندوق الوارد",
+    "starred": "مميز بنجمة",
+    "sendEmail": "إرسال بريد",
+    "drafts": "المسودات",
+    "allMail": "كل البريد",
+    "trash": "المهملات",
+    "spam": "رسائل غير مرغوب فيها",
+    "openDrawer": "فتح القائمة"
   }
-  
 }

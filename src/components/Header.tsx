@@ -43,28 +43,27 @@ export default function Header() {
                     px: 3,
                     py: 1,
                     display: "flex",
+                    flexDirection: { xs: "column", sm: "row" },
+                    gap: 2,
                     justifyContent: "space-between",
                     alignItems: "center",
                     bgcolor: "background.paper",
                 }}
             >
-
                 <Stack direction="row" spacing={2} alignItems="center">
                     <Typography variant="body2">
-                        {mode === "dark" ? "Dark" : "Light"}
+                        {mode === "dark" ? t("header.dark") : t("header.light")}
                     </Typography>
                     <Switch checked={mode === "dark"} onChange={handleThemeToggle} />
                 </Stack>
-
-
-                <Stack direction="row" spacing={1}>
-                    <Button size="small" onClick={() => handleLanguage("eng")}>
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                    <Button size="small" onClick={() => handleLanguage("en")}>
                         EN
                     </Button>
                     <Button size="small" onClick={() => handleLanguage("ar")}>
                         AR
                     </Button>
-                </Stack>
+                </Box>
             </Box>
 
             <Divider />
@@ -75,6 +74,8 @@ export default function Header() {
                     px: 3,
                     py: 2,
                     display: "flex",
+                    flexDirection: { xs: "column", sm: "row" },
+                    gap: 2,
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}
@@ -90,12 +91,12 @@ export default function Header() {
                         NEWS <span style={{ fontWeight: 400 }}>24</span>
                     </Typography>
                 </Link>
-                <Stack direction="row" spacing={2}>
-                    <Button variant="outlined">Sign up</Button>
+                <Box sx={{ display: 'flex', gap: 3 }}>
+                    <Button variant="outlined">{t("header.signup")}</Button>
                     <Button variant="contained" color="error">
-                        Subscribe
+                        {t("header.subscribe")}
                     </Button>
-                </Stack>
+                </Box>
             </Box>
 
             <Divider />

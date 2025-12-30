@@ -10,7 +10,13 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(newsApi.middleware),
 })
-let prevLang = store.getState().localisation.language;
+
+const initialLang = store.getState().localisation.language;
+i18n.changeLanguage(initialLang);
+document.documentElement.lang = initialLang;
+document.documentElement.dir = initialLang === "ar" ? "rtl" : "ltr";
+
+let prevLang = initialLang;
 
 store.subscribe(() => {
   const currentLang = store.getState().localisation.language;
@@ -18,6 +24,8 @@ store.subscribe(() => {
   if (currentLang !== prevLang) {
     localStorage.setItem("language", currentLang);
     i18n.changeLanguage(currentLang);
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
     prevLang = currentLang;
   }
  });

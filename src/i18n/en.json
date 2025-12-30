@@ -1,12 +1,18 @@
 {
   "welcomeMessage": "Welcome to my app!",
-  "failed_to_load":"failed to load",
+  "failed_to_load": "failed to load",
+  "no_posts_available": "No posts available",
+  "read":"Read More",
   "language": {
     "english": "English",
     "arabic": "Arabic"
   },
   "header": {
-    "theme": "Theme"
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "signup": "Sign up",
+    "subscribe": "Subscribe"
   },
   "nav": {
     "news": "News",
@@ -17,5 +23,43 @@
     "sport": "Sport",
     "video": "Video",
     "more": "More"
+  },
+  "landing": {
+    "breakingNews": "BREAKING NEWS",
+    "trendingNews": "Trending News",
+    "by": "By"
+  },
+  "post": {
+    "share": "Share",
+    "checkThisOut": "Check this out!",
+    "shareNotSupported": "Sharing not supported on this device. Copy the link instead.",
+    "europeDigitalEditor": "Europe digital editor",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "company": "Company",
+    "website": "Website",
+    "lat": "Lat",
+    "lng": "Lng",
+    "timeAgo": "52 minutes ago"
+  },
+  "about": {
+    "content": "hei about us page"
+  },
+  "footer": {
+    "text": "Footer"
+  },
+  "common": {
+    "showMore": "show more"
+  },
+  "drawer": {
+    "inbox": "Inbox",
+    "starred": "Starred",
+    "sendEmail": "Send email",
+    "drafts": "Drafts",
+    "allMail": "All mail",
+    "trash": "Trash",
+    "spam": "Spam",
+    "openDrawer": "Open drawer"
   }
 }

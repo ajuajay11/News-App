@@ -7,8 +7,10 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import { useTranslation } from "react-i18next";
 
 export default function TemporaryDrawer() {
+  const { t } = useTranslation();
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -16,20 +18,29 @@ export default function TemporaryDrawer() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => (
-          <ListItem key={text} disablePadding>
+        {[
+          { text: t('drawer.inbox'), key: 'Inbox' },
+          { text: t('drawer.starred'), key: 'Starred' },
+          { text: t('drawer.sendEmail'), key: 'Send email' },
+          { text: t('drawer.drafts'), key: 'Drafts' }
+        ].map((item) => (
+          <ListItem key={item.key} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text) => (
-          <ListItem key={text} disablePadding>
+        {[
+          { text: t('drawer.allMail'), key: 'All mail' },
+          { text: t('drawer.trash'), key: 'Trash' },
+          { text: t('drawer.spam'), key: 'Spam' }
+        ].map((item) => (
+          <ListItem key={item.key} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -39,7 +50,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Open drawer</Button>
+      <Button onClick={toggleDrawer(true)}>{t('drawer.openDrawer')}</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
