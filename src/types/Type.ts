@@ -1,4 +1,4 @@
-import { Address } from './Type';
+
 export type User = {
   id: number;
   name: string;
@@ -8,9 +8,9 @@ export type User = {
   phone: string;
   website: string;
   company: Company;
-  Address:Address[],
-  Geo:Geo[],
-  Company:Company[]
+  Address: Address[],
+  Geo: Geo[],
+  Company: Company[]
 };
 
 export type Address = {
@@ -32,7 +32,7 @@ export type Company = {
   bs: string;
 };
 
-export type Post = {
+export type Posts = {
   userId: number;
   id: number;
   title: string;

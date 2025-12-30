@@ -4,6 +4,7 @@ import App from "../App";
 import LandingLayout from "../layout/LandingLayout";
 import Landing from "../pages/Landing";
 import About from "../pages/About";
+import Posts from "../pages/Posts";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
         children: [
           { index: true, Component: Landing },
           { path: "about", Component: About },
+          { path: "posts/:id", Component: Posts }
         ],
       },
     ],

@@ -1,12 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+ import type {User, Posts} from '../../../types/Type'
  
-export type Posts={
-    userId: number,
-    id: number,
-    title: string,
-    body: string
-}
-
 export const newsApi = createApi({
   reducerPath: 'newsApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com' }),
@@ -14,10 +8,13 @@ export const newsApi = createApi({
     getPosts: build.query<Posts[], void>({
       query: () => `/posts`,
     }),
-    getUsers: build.query({
+    getUsers: build.query<User[], void>({
       query: () => `/users`,
+    }),
+    getPostById: build.query<Posts, number>({
+      query: (id) => `/posts/${id}`,
     }),
   }),
 })
 
-export const { useGetPostsQuery, useGetUsersQuery  } = newsApi;
+export const { useGetPostsQuery, useGetUsersQuery, useGetPostByIdQuery } = newsApi;

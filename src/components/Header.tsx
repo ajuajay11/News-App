@@ -8,6 +8,7 @@ import { useColorScheme } from "@mui/material/styles";
 import { useDispatch } from "react-redux";
 import { changeLanguage } from "../store/features/LanguageSlice";
 import type { Language } from "../store/features/LanguageSlice";
+import Drawer from "./Drawer"
 
 export default function Header() {
     const { mode, setMode } = useColorScheme();
@@ -30,8 +31,7 @@ export default function Header() {
                 borderColor: "divider",
             }}
         >
-
-
+            <Drawer />
             <div onClick={handleLanguageClick}>
                 <button data-lang="ar">Arabic</button>
                 <button data-lang="eng">English</button>
