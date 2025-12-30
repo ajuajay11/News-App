@@ -11,6 +11,7 @@ export const store = configureStore({
     getDefaultMiddleware().concat(newsApi.middleware),
 })
 let prevLang = store.getState().localisation.language;
+
 store.subscribe(() => {
   const currentLang = store.getState().localisation.language;
 
@@ -18,8 +19,6 @@ store.subscribe(() => {
     localStorage.setItem("language", currentLang);
     i18n.changeLanguage(currentLang);
     prevLang = currentLang;
-    document.documentElement.lang = currentLang;
-  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
   }
  });
 

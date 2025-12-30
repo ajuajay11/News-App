@@ -1,0 +1,11 @@
+    .newsTitle {
+        text-transform: capitalize;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-weight: bolder;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        line-height: 1.2;
+        max-width: 100%;
+        hyphens: auto;
+    }

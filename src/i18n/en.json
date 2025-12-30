@@ -1,10 +1,21 @@
 {
   "welcomeMessage": "Welcome to my app!",
+  "failed_to_load":"failed to load",
   "language": {
     "english": "English",
     "arabic": "Arabic"
   },
   "header": {
     "theme": "Theme"
+  },
+  "nav": {
+    "news": "News",
+    "showMore": "Show more news sections",
+    "middleEast": "Middle East",
+    "explained": "Explained",
+    "opinion": "Opinion",
+    "sport": "Sport",
+    "video": "Video",
+    "more": "More"
   }
 }

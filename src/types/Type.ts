@@ -8,9 +8,7 @@ export type User = {
   phone: string;
   website: string;
   company: Company;
-  Address: Address[],
-  Geo: Geo[],
-  Company: Company[]
+   
 };
 
 export type Address = {

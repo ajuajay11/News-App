@@ -1,10 +1,22 @@
 {
   "welcomeMessage": "مرحبًا بك في تطبيقي!",
+  "failed_to_load": "مرحبًا بك في تط",
   "language": {
     "english": "الإنجليزية",
     "arabic": "العربية"
   },
   "header": {
     "theme": "المظهر"
+  },
+  "nav": {
+    "news": "الأخبار",
+    "showMore": "عرض المزيد من أقسام الأخبار",
+    "middleEast": "الشرق الأوسط",
+    "explained": "شرح مبسّط",
+    "opinion": "الرأي",
+    "sport": "الرياضة",
+    "video": "فيديو",
+    "more": "المزيد"
   }
+  
 }
