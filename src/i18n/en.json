@@ -1,0 +1,10 @@
+{
+  "welcomeMessage": "Welcome to my app!",
+  "language": {
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "header": {
+    "theme": "Theme"
+  }
+}

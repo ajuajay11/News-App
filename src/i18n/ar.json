@@ -1,0 +1,10 @@
+{
+  "welcomeMessage": "مرحبًا بك في تطبيقي!",
+  "language": {
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "header": {
+    "theme": "المظهر"
+  }
+}
