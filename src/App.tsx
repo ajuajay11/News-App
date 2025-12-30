@@ -4,6 +4,9 @@ import BackToTop from "./components/BackToTop";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Add this import for AOS styles
 import { useEffect } from "react";
+import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
 const theme = createTheme({
   colorSchemes: {
     dark: true,
@@ -12,18 +15,21 @@ const theme = createTheme({
 
 export default function App() {
   useEffect(() => {
-     setTimeout(() => {
-      AOS.init({ 
+    setTimeout(() => {
+      AOS.init({
         duration: 1000,
-        once: false,  
-        mirror: false, 
+        once: false,
+        mirror: false,
       });
     }, 100);
   }, []);
   return (
-    <ThemeProvider theme={theme}>
-      <BackToTop/>
-      <Outlet />   
-    </ThemeProvider>
+    <CssVarsProvider defaultMode="light">
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <BackToTop />
+        <Outlet />
+      </ThemeProvider>
+    </CssVarsProvider>
   );
 }

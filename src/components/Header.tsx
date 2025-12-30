@@ -111,11 +111,8 @@ export default function Header() {
                     </Button>
                 </Stack>
                 <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                    {/* Language Icon */}
-                    <Languages size={18} strokeWidth={2.5} style={{ marginRight: '4px' }} />
-
-                    {/* EN Button */}
-                    <Button
+                     <Languages size={18} strokeWidth={2.5} style={{ marginRight: '4px' }} />
+                     <Button
                         size="small"
                         onClick={() => handleLanguage("en")}
                         variant={i18n.language === "en" ? "contained" : "outlined"}
@@ -146,8 +143,7 @@ export default function Header() {
                     >
                         EN
                     </Button>
-
-                    {/* AR Button */}
+ 
                     <Button
                         size="small"
                         onClick={() => handleLanguage("ar")}
@@ -183,8 +179,7 @@ export default function Header() {
             </Box>
 
             <Divider />
-
-            {/* 🔹 MAIN HEADER */}
+ 
             <Box
                 sx={{
                     px: 3,
