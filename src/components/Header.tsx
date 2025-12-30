@@ -38,6 +38,7 @@ export default function Header() {
         "opinion",
         "sport",
         "video",
+        "about",
         "more",
     ];
 
@@ -228,20 +229,25 @@ export default function Header() {
                 }}
             >
                 {items.map((key) => (
-                    <Typography
+                    <Link
                         key={key}
-                        className="justify-center"
-                        sx={{
-                            cursor: "pointer",
-                            fontWeight: 500,
-                            whiteSpace: "nowrap",
-                            "&:hover": {
-                                color: "error.main",
-                            },
-                        }}
+                        to={key === 'about' ? '/about' : `/`}
+                        style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                        {t(`nav.${key}`)}
-                    </Typography>
+                        <Typography
+                            className="justify-center"
+                            sx={{
+                                cursor: "pointer",
+                                fontWeight: 500,
+                                whiteSpace: "nowrap",
+                                "&:hover": {
+                                    color: "error.main",
+                                },
+                            }}
+                        >
+                            {t(`nav.${key}`)}
+                        </Typography>
+                    </Link>
                 ))}
             </Box>
 

@@ -22,6 +22,7 @@
     "opinion": "Opinion",
     "sport": "Sport",
     "video": "Video",
+    "about": "About",
     "more": "More"
   },
   "landing": {
@@ -47,7 +48,10 @@
     "content": "hei about us page"
   },
   "footer": {
-    "text": "Footer"
+    "description": "Stay updated with the latest news from around the world.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "rights": "All rights reserved © 2025"
   },
   "common": {
     "showMore": "show more"

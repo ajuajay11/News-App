@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import {
   useGetPostByIdQuery,
@@ -61,39 +61,53 @@ export default function Posts() {
 
   return (
     <>
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <Title text={postWithAuthor.title} />
-        <div className="border-b pb-4 mb-6">
-          <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-            <span>{t("post.timeAgo")}</span>
-            <div className="flex items-center gap-4">
-              <button className="cursor flex items-center gap-1 bg-[#d32f2f] text-[#fff] px-5 py-3 rounded-xl" onClick={handleShare}>
-                {t("post.share")}
-                <svg width="16" height="16" fill="currentColor">
-                  <path d="M13 10a2 2 0 0 0-1.54.73L5.91 7.7a2.1 2.1 0 0 0 0-1.39l5.55-3.03A2 2 0 1 0 11 2a2 2 0 0 0 .04.39L5.5 5.42a2 2 0 1 0 0 3.16l5.54 3.03A2 2 0 1 0 13 10Z" />
-                </svg>
-              </button>
+      <article className="max-w-4xl mx-auto px-4 py-8" >
+        <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+          <Link to="/" className="hover:text-blue-600 transition-colors">
+            {t("nav.news")}
+          </Link>
+          <span>/</span>
+          <span className="text-gray-200 font-medium truncate max-w-[200px] sm:max-w-md">
+            {postWithAuthor.title}
+          </span>
+        </div>
+        <div data-aos="fade-in" data-aos-duration="1000" data-aos-offset="0" data-aos-once="false">
+
+          <Title text={postWithAuthor.title} />
+          <div className="border-b pb-4 mb-6">
+            <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+              <span>{t("post.timeAgo")}</span>
+              <div className="flex items-center gap-4">
+                <button className="cursor flex items-center gap-1 bg-[#d32f2f] text-[#fff] px-5 py-3 rounded-xl" onClick={handleShare}>
+                  {t("post.share")}
+                  <svg width="16" height="16" fill="currentColor">
+                    <path d="M13 10a2 2 0 0 0-1.54.73L5.91 7.7a2.1 2.1 0 0 0 0-1.39l5.55-3.03A2 2 0 1 0 11 2a2 2 0 0 0 .04.39L5.5 5.42a2 2 0 1 0 0 3.16l5.54 3.03A2 2 0 1 0 13 10Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div>
+              <p className="font-semiboldk">
+                {postWithAuthor.author?.name}
+              </p>
+              <p className="text-sm">
+                {t("post.europeDigitalEditor")}
+              </p>
             </div>
           </div>
-          <div>
-            <p className="font-semiboldk">
-              {postWithAuthor.author?.name}
-            </p>
-            <p className="text-sm">
-              {t("post.europeDigitalEditor")}
-            </p>
-          </div>
         </div>
-        <div className="w-full h-[420px] mb-8 overflow-hidden rounded">
+
+        <div className="w-full h-[420px] mb-8 overflow-hidden rounded" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0" data-aos-once="false">
           <ImageWithFallback
             src={`https://picsum.photos/seed/news-${postWithAuthor.id}/1200/600`}
             alt={postWithAuthor.title}
             className="w-full h-full object-cover"
           />
         </div>
-        <div >
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0" data-aos-once="false">
           {[1, 2, 3, 4].map((e) => (
-            <div key={e}>
+            <div key={e} className="mb-4 flex">
+              <span>{e}. {" "}</span>
               <p className="capitalize">{postWithAuthor.body.split("\n")}</p>
             </div>
           ))}
