@@ -6,6 +6,7 @@ import "aos/dist/aos.css"; // Add this import for AOS styles
 import { useEffect } from "react";
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import ScrollToTop from "./helper/ScrollToTop";
 
 const theme = createTheme({
   colorSchemes: {
@@ -25,6 +26,7 @@ export default function App() {
   }, []);
   return (
     <CssVarsProvider defaultMode="light">
+      <ScrollToTop/>
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <BackToTop />
